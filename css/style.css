@@ -1,6 +1,7 @@
 /* index.html */
 body{
     background-color: #191919;
+    overflow: hidden;
 }
 .image-wrapper {
     position: relative;
@@ -60,8 +61,8 @@ body{
 .axe-weapon{
     position: absolute;
     z-index: 1;
-    width: 200px;
-    top:20px;
+    width: 150px;
+    top: 200px;
     left: 30px;
     animation: axe-weapon-animation 1.5s infinite ;
 }
@@ -71,8 +72,8 @@ body{
 }
 .eyeball-scary{
     position: absolute;
-    width: 200px;
-    top: 180px;
+    width: 100px;
+    top: 300px;
     left:50px;
     animation: eyeball-scary-animation 1.5s infinite;
 }
@@ -94,19 +95,262 @@ body{
 .mummy-scarry{
     position: absolute;
     width: 300px;
-    bottom:70px;
+    bottom:0px;
     left:-30px;
     animation: mummy-scarry-animation 5s infinite ease-in-out alternate;
 }
 @keyframes mummy-scarry-animation{
-    from{bottom:70px; left:-30px; opacity: 0%;}
-    to{bottom:70px; left:1300px; opacity: 40%;}
+    from{bottom:0px; left:-30px; opacity: 0%;}
+    to{bottom:0px; left:1300px; opacity: 40%;}
 }
 .tombstone-rip{
     position: absolute;
     z-index: 2;
     width: 400px;
     bottom:0px;
+    left: 600px;
+    transition: all 500ms ease-in-out;
+}
+.tombstone-rip:hover{
+    width: 200px;
+    opacity: 20%;
+    bottom: 0px;
+    left: 700px;
+    transition: all 500ms ease-in-out;
+}
+.knife-blood{
+    position: absolute;
+    width: 300px;
+    top:20px;
+    left: 600px;
+    opacity: 0%;
+    transition: all 500ms ease-in;
+
+}
+.knife-blood:hover{
+    opacity: 100%;
+    transform: rotate(360deg);
+    transition: all 500ms ease-in;
+}
+.devil-box{
+    position: relative;
+    background-color: #EA7E32;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.devil-scary{
+    position: absolute;
+    opacity: 100%;
+    width: 150px;
+    top:50%;
     left: 50%;
-    color: white;
+    transform: translate(-40%,-50%);
+    transition: all 500ms ease-in-out;
+}
+.devil-scary:hover{
+    opacity: 50%;
+    transition: all 500ms ease-in-out;
+}
+
+/* gift-box.html */
+.frankentein-box{
+    position: relative;
+    background-color: #EA7E32;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.frankentein-monster{
+    position: absolute;
+    opacity: 100%;
+    width: 150px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: all 500ms ease-in-out;
+}
+.frankentein-monster:hover{
+    opacity: 50%;
+    transition: all 500ms ease-in-out;
+}
+.fullmoon-night{
+    position: absolute;
+    width: 250px;
+    top:20px;
+    left: 600px;
+    animation: fullmoon-night-animation 10s infinite alternate ease-in-out ;
+}
+@keyframes fullmoon-night-animation{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+.balloon-party{
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+    animation:balloon-party-animation 4s infinite alternate ease-in-out;
+}
+@keyframes balloon-party-animation{
+    0%{bottom:0px; left: 0px;}
+    25%{bottom:100px; left: 100px;}
+    50%{bottom:200px; left: 0px;}
+    75%{bottom:300px; left: 100px;}
+    100%{bottom:400px; left:0px;}
+}
+.broom-witch{
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+    animation: broom-witch-animation 4s infinite alternate ease-in-out;
+
+}
+@keyframes broom-witch-animation{
+    0%{bottom:0px; right: 0px;}
+    25%{bottom:100px; right: 100px;}
+    50%{bottom:200px; right: 0px;}
+    75%{bottom:300px; right: 100px;}
+    100%{bottom:400px; right:0px;}
+}
+.ghost-scary{
+    position: absolute;
+    width: 220px;
+    animation: ghost-scary-animation 7s infinite linear;
+}
+@keyframes ghost-scary-animation{
+    0%{bottom:0%; left: 0%; opacity: 0%;}
+    50%{bottom:50%; left:50%; opacity: 50%;}
+    100%{bottom:100%; left:100%; opacity: 100%;}
+}
+.candy-sweet{
+    position: absolute;
+    width: 250px;
+    bottom: 0px;
+    left: 400px;
+    transition: all 1s ease-in-out ;
+}
+.candy-sweet:hover{
+    width: 350px;
+    left: 350px;
+    transition: all 1s ease-in-out;
+}
+.voodoodoll{
+    position: absolute;
+    width: 250px;
+    bottom: 0px;
+    right: 400px;
+    transition: all 1s ease-in-out;
+}
+.voodoodoll:hover{
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out;
+}
+.bat-scary{
+    position: absolute;
+    width: 150px;
+    bottom: 0px;
+    left: 700px;
+    opacity: 0%;
+    transition: all 500ms ease-in-out;
+}
+.bat-scary:hover{
+    opacity:100%;
+    transition: all 500ms ease-in-out;
+}
+
+/* haunted-house.html */
+.zombie-horror-box{
+    position: relative;
+    background-color: #EA7E32;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.zombie-horror{
+    position: absolute;
+    opacity: 100%;
+    width: 150px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: all 500ms ease-in-out;
+}
+.zombie-horror:hover{
+    opacity: 50%;
+    transition: all 500ms ease-in-out;
+}
+.pumpkin-cat{
+    position: absolute;
+    width: 250px;
+    top:0px;
+    left: 600px;
+    animation: pumpkin-cat-animation 7s infinite alternate ease-in-out ;
+}
+@keyframes pumpkin-cat-animation{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+.bat{
+    position: absolute;
+    width: 100px;
+    transition: all 500ms ease-in-out;
+    animation: bat-animation 7s infinite alternate linear;
+}
+.bat:hover{
+    width: 200px;
+    transition: all 500ms ease-in-out;
+}
+@keyframes bat-animation{
+    0%{bottom: 0%; left: 0%;}
+    50%{bottom: 50%; left: 50%;}
+    100%{bottom: 100%; left: 100%;}
+}
+.ghost{
+    position: absolute;
+    width: 100px;
+    transition: all 500ms ease-in-out;
+    animation: ghost-animation 7s infinite alternate linear;
+}
+.ghost:hover{
+    width: 200px;
+    transition: all 500ms ease-in-out;
+}
+@keyframes ghost-animation{
+    0%{top: 0%; right: 0%;}
+    50%{top: 50%; right: 50%;}
+    100%{top: 100%; right: 100%;}
+}
+.owl-bird{
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+    left: 650px;
+    transition: all 500ms ease-in-out;
+}
+.owl-bird:hover{
+    filter: blur(10px);
+    transition: all 500ms ease-in-out;
+}
+.poison-danger{
+    position: absolute;
+    width: 100px;
+    top:50%;
+    right:50px;
+    animation: poison-danger-animation 1s infinite alternate ease-in-out;
+}
+@keyframes poison-danger-animation{
+    from{transform: rotate(0deg) scale(1);}
+    to{transform: rotate(360deg) scale(2)}
+}
+.ghostface{
+    position: absolute;
+    width: 100px;
+    bottom: 50px;
+    right: 400px;
+    opacity: 0%;
+    transition: all 500ms ease-in-out;
+}
+.ghostface:hover{
+    opacity: 100%;
+    transition: all 500ms ease-in-out;
 }
