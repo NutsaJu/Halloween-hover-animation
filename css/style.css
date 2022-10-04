@@ -1,39 +1,111 @@
-.block{
-    width: 100%;
-    height:100px;
-    background-color: yellow;
+/* index.html */
+body{
+    background-color: #191919;
+}
+.image-wrapper {
     position: relative;
-    animation: blockanimation 5s 2 alternate;
-}
-@keyframes blockanimation{
-    from{top:0px;}
-    to{top:695px; background-color: blue; opacity: 0.5;}
-}
-.text-block{
-    width:100%;
-    height: 100px;
-    font-size: 50px;
-    color: yellow;
-    background-color: blue;
-    position: relative;
-}
-.text{
-    font-size: 50px;
-    color: yellow;
-    position: absolute;
-    animation: textanimation 5s linear infinite alternate;
+    width: 500px;
+    height: 500px;
+    background-color: #EA7E32;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 150px;
+    margin-left: 20px;
 }
 
-@keyframes textanimation{
-    from{left:20px;}
-    to{left:1200px;}
+.gate-entrance {
+    position: absolute;
+    width: 340px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 500ms ease-in-out;
+
 }
-.iron-man{
-    width: 200px;
+
+.gate-entrance:hover {
+    width: 440px;
+    transition: all 500ms ease-in-out;
+}
+
+.gift-box {
+    position: absolute;
+    width: 300px;
+    margin: 50% 50%;
+    transform: translate(-50%, -50%);
+    transition: all 500ms ease-in-out;
+}
+.gift-box:hover{
+    width: 400px;
+    transition: all 500ms ease-in-out;
+}
+
+.haunted-house {
+    position: absolute;
+    width: 300px;
+    margin: 50% 50%;
+    transform: translate(-50%, -50%);
+    transition: all 500ms ease-in-out;
+}
+.haunted-house:hover{
+    width: 400px;
+    transition: all 500ms ease-in-out;
+}
+
+/* gate-entrance.html */
+.image-box{
     position: relative;
-    animation: iron-mananimation 10s infinite ;
+    height: 797px;
 }
-@keyframes iron-mananimation{
-    from{top:700px;}
-    to{top:0px;}
+.axe-weapon{
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    top:20px;
+    left: 30px;
+    animation: axe-weapon-animation 1.5s infinite ;
+}
+@keyframes axe-weapon-animation{
+    from{transform: rotate(10deg);}
+    to{transform: rotate(100deg);}
+}
+.eyeball-scary{
+    position: absolute;
+    width: 200px;
+    top: 180px;
+    left:50px;
+    animation: eyeball-scary-animation 1.5s infinite;
+}
+@keyframes eyeball-scary-animation{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(45deg);}
+}
+.skull-horror{
+    position: absolute;
+    width: 300px;
+    top: 70px;
+    right:100px;
+    animation: skull-horror-animation 10s infinite ease-in;
+}
+@keyframes skull-horror-animation{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+.mummy-scarry{
+    position: absolute;
+    width: 300px;
+    bottom:70px;
+    left:-30px;
+    animation: mummy-scarry-animation 5s infinite ease-in-out alternate;
+}
+@keyframes mummy-scarry-animation{
+    from{bottom:70px; left:-30px; opacity: 0%;}
+    to{bottom:70px; left:1300px; opacity: 40%;}
+}
+.tombstone-rip{
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    bottom:0px;
+    left: 50%;
 }
